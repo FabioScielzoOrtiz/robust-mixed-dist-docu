@@ -45,7 +45,8 @@ Compute method
 
 Parameters: (inputs)
 ----------
-X: a pandas/polars data-frame or a numpy array. Represents a data matrix.
+X: a pandas/polars data-frame or a numpy array. Represents a predictors matrix and is required. 
+The first p1 predictors must be the quantitative, followed by the p2 binary predictors, and finally the p3 multiclass predictors.
     
 Returns: (outputs)
 --------
@@ -137,7 +138,8 @@ Computes the geometric variability and covariance matrix to be used in 'compute'
 Parameters: (inputs)
 -----------
 
-X: a pandas/polars data-frame or a numpy array. Represents a data matrix.
+X: a pandas/polars data-frame or a numpy array. Represents a predictors matrix and is required. 
+The first p1 predictors must be the quantitative, followed by the p2 binary predictors, and finally the p3 multiclass predictors.
             
 Returns: (outputs)
 --------
@@ -242,7 +244,8 @@ Computes the Generalized Gower function for the defined sample of data.
 Parameters: (inputs)
 -----------
 
-X: a pandas/polars data-frame or a numpy array. Represents a data matrix.
+X: a pandas/polars data-frame or a numpy array. Represents a predictors matrix and is required. 
+The first p1 predictors must be the quantitative, followed by the p2 binary predictors, and finally the p3 multiclass predictors.
 ```
 
 ### Example
@@ -309,7 +312,8 @@ Compute method
 Parameters: (inputs)
 -----------
 
-X: a pandas/polars data-frame or a numpy array. Represents a data matrix.
+X: a pandas/polars data-frame or a numpy array. Represents a predictors matrix and is required. 
+The first p1 predictors must be the quantitative, followed by the p2 binary predictors, and finally the p3 multiclass predictors.
 
 tol: a tolerance value to round the close-to-zero eigenvalues of the Gramm matrices.
 
