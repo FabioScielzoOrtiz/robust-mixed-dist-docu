@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PyDistances Usage &#8212; PyDistances</title>
+    <title>robust_mixed_dist Usage &#8212; robust_mixed_dist</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'PyDistances_usage';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="PyDistances" href="intro.html" />
+    <link rel="prev" title="robust_mixed_dist" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -149,8 +149,8 @@
       
     
     
-    <img src="_static/PyDistances_logo.jpg" class="logo__image only-light" alt="PyDistances - Home"/>
-    <script>document.write(`<img src="_static/PyDistances_logo.jpg" class="logo__image only-dark" alt="PyDistances - Home"/>`);</script>
+    <img src="_static/PyDistances_logo.jpg" class="logo__image only-light" alt="robust_mixed_dist - Home"/>
+    <script>document.write(`<img src="_static/PyDistances_logo.jpg" class="logo__image only-dark" alt="robust_mixed_dist - Home"/>`);</script>
   
   
 </a></div>
@@ -171,12 +171,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    PyDistances
+                    robust_mixed_dist
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>PyDistances Usage</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>robust_mixed_dist Usage</strong></a></li>
 </ul>
 
     </div>
@@ -231,7 +231,7 @@
       
       
       
-      <li><a href="https://github.com/FabioScielzoOrtiz/PyDistances" target="_blank"
+      <li><a href="https://github.com/FabioScielzoOrtiz/robust_mixed_dist" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -248,7 +248,7 @@
       
       
       
-      <li><a href="https://github.com/FabioScielzoOrtiz/PyDistances/issues/new?title=Issue%20on%20page%20%2FPyDistances_usage.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/FabioScielzoOrtiz/robust_mixed_dist/issues/new?title=Issue%20on%20page%20%2FPyDistances_usage.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +362,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>PyDistances Usage</h1>
+    <h1>robust_mixed_dist Usage</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -460,12 +460,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pydistances-usage">
-<h1><strong>PyDistances Usage</strong><a class="headerlink" href="#pydistances-usage" title="Link to this heading">#</a></h1>
+<h1><strong>robust_mixed_dist Usage</strong><a class="headerlink" href="#pydistances-usage" title="Link to this heading">#</a></h1>
 <section id="requirements">
 <h2><strong>Requirements</strong><a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PyDistances</span> <span class="o">--</span><span class="n">upgrade</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">robust_mixed_dist</span> <span class="o">--</span><span class="n">upgrade</span>
 </pre></div>
 </div>
 </div>
@@ -475,16 +475,16 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">PyMachineLearning.preprocessing</span> <span class="kn">import</span> <span class="n">encoder</span>
-<span class="kn">from</span> <span class="nn">PyDistances.quantitative</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Euclidean_dist</span><span class="p">,</span> <span class="n">Euclidean_dist_matrix</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">robust_mixed_dist.quantitative</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Euclidean_dist</span><span class="p">,</span> <span class="n">Euclidean_dist_matrix</span><span class="p">,</span>
                                       <span class="n">Minkowski_dist</span><span class="p">,</span> <span class="n">Minkowski_dist_matrix</span><span class="p">,</span>
                                       <span class="n">Canberra_dist</span><span class="p">,</span> <span class="n">Canberra_dist_matrix</span><span class="p">,</span>
                                       <span class="n">Pearson_dist_matrix</span><span class="p">,</span>
                                       <span class="n">Mahalanobis_dist</span><span class="p">,</span> <span class="n">Mahalanobis_dist_matrix</span><span class="p">,</span>
                                       <span class="n">Robust_Maha_dist</span><span class="p">,</span> <span class="n">Robust_Maha_dist_matrix</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">PyDistances.binary</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Sokal_dist</span><span class="p">,</span> <span class="n">Sokal_dist_matrix</span><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">robust_mixed_dist.binary</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Sokal_dist</span><span class="p">,</span> <span class="n">Sokal_dist_matrix</span><span class="p">,</span>
                                 <span class="n">Jaccard_dist</span><span class="p">,</span> <span class="n">Jaccard_dist_matrix</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">PyDistances.multiclass</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Matching_dist</span><span class="p">,</span> <span class="n">Matching_dist_matrix</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">PyDistances.mixed</span> <span class="kn">import</span> <span class="p">(</span><span class="n">GG_dist</span><span class="p">,</span> <span class="n">GG_dist_matrix</span><span class="p">,</span> <span class="n">RelMS_dist_matrix</span><span class="p">,</span> <span class="n">S_robust</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">robust_mixed_dist.multiclass</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Matching_dist</span><span class="p">,</span> <span class="n">Matching_dist_matrix</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">robust_mixed_dist.mixed</span> <span class="kn">import</span> <span class="p">(</span><span class="n">GG_dist</span><span class="p">,</span> <span class="n">GG_dist_matrix</span><span class="p">,</span> <span class="n">RelMS_dist_matrix</span><span class="p">,</span> <span class="n">S_robust</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1577,7 +1577,7 @@ M: the Matching distance matrix between the rows of &#39;X&#39;.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">PyDistances</p>
+        <p class="prev-next-title">robust_mixed_dist</p>
       </div>
     </a>
 </div>
