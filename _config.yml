@@ -3,7 +3,7 @@
 
 title: documentation
 author: Fabio Scielzo Ortiz
-logo: images/pydistances_logo_.jpg
+logo: images/robust_mixed_dist_logo.jpg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
