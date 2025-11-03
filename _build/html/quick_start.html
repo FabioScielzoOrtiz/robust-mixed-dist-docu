@@ -1,0 +1,1526 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick Start &#8212; documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'quick_start';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="robust_mixed_dist" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pydistances_logo_.jpg" class="logo__image only-light" alt="documentation - Home"/>
+    <script>document.write(`<img src="_static/pydistances_logo_.jpg" class="logo__image only-dark" alt="documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    robust_mixed_dist
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quick Start</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="quantitative.html"><code class="docutils literal notranslate"><span class="pre">quantitative</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="binary.html"><code class="docutils literal notranslate"><span class="pre">binary</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiclass.html"><code class="docutils literal notranslate"><span class="pre">multiclass</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mixed.html"><code class="docutils literal notranslate"><span class="pre">mixed</span></code></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FabioScielzoOrtiz/robust_mixed_dist-package" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FabioScielzoOrtiz/robust_mixed_dist-package/issues/new?title=Issue%20on%20page%20%2Fquick_start.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/quick_start.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quick Start</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-mixed"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.mixed</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ggowerdistmatrix"><code class="docutils literal notranslate"><span class="pre">GGowerDistMatrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ggowerdist"><code class="docutils literal notranslate"><span class="pre">GGowerDist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastggowerdistmatrix"><code class="docutils literal notranslate"><span class="pre">FastGGowerDistMatrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relmsdistmatrix"><code class="docutils literal notranslate"><span class="pre">RelMSDistMatrix</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-quantitative"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.quantitative</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-dist-matrix"><code class="docutils literal notranslate"><span class="pre">euclidean_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-dist"><code class="docutils literal notranslate"><span class="pre">euclidean_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-dist-matrix"><code class="docutils literal notranslate"><span class="pre">minkowski_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-dist"><code class="docutils literal notranslate"><span class="pre">minkowski_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canberra-dist-matrix"><code class="docutils literal notranslate"><span class="pre">canberra_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canberra-dist"><code class="docutils literal notranslate"><span class="pre">canberra_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pearson-dist-matrix"><code class="docutils literal notranslate"><span class="pre">pearson_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-dist-matrix"><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-dist"><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-maha-dist-matrix"><code class="docutils literal notranslate"><span class="pre">robust_maha_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-maha-dist"><code class="docutils literal notranslate"><span class="pre">robust_maha_dist</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-binary"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.binary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokal-dist-matrix"><code class="docutils literal notranslate"><span class="pre">sokal_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokal-dist"><code class="docutils literal notranslate"><span class="pre">sokal_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jaccard-dist-matrix"><code class="docutils literal notranslate"><span class="pre">jaccard_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jaccard-dist"><code class="docutils literal notranslate"><span class="pre">jaccard_dist</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-multiclass"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.multiclass</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamming-dist-matrix"><code class="docutils literal notranslate"><span class="pre">hamming_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamming-dist"><code class="docutils literal notranslate"><span class="pre">hamming_dist</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="quick-start">
+<h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install robust-mixed-dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To see the available versions of the package go to the release history at PyPi: <a class="reference external" href="https://pypi.org/project/robust_mixed_dist/#history">https://pypi.org/project/robust_mixed_dist/#history</a></p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Variable</p></th>
+<th class="head text-left"><p>Description</p></th>
+<th class="head text-left"><p>Variable Type</p></th>
+<th class="head text-left"><p>Possible Categories / Range</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>latitude</strong></p></td>
+<td class="text-left"><p>Latitude of the house</p></td>
+<td class="text-left"><p>Quantitative</p></td>
+<td class="text-left"><p>24.86 - 25.27</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>longitude</strong></p></td>
+<td class="text-left"><p>Longitude of the house</p></td>
+<td class="text-left"><p>Quantitative</p></td>
+<td class="text-left"><p>55.06 - 55.44</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>price</strong></p></td>
+<td class="text-left"><p>Market price of the house</p></td>
+<td class="text-left"><p>Quantitative</p></td>
+<td class="text-left"><p>220000 - 35000000</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>price_per_sqft</strong></p></td>
+<td class="text-left"><p>Price per square foot</p></td>
+<td class="text-left"><p>Quantitative</p></td>
+<td class="text-left"><p>361.87 - 4805.87</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>size in sqft</strong></p></td>
+<td class="text-left"><p>Size in square feet</p></td>
+<td class="text-left"><p>Quantitative</p></td>
+<td class="text-left"><p>294 - 9576</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>no of bedrooms</strong></p></td>
+<td class="text-left"><p>Number of bedrooms in the house</p></td>
+<td class="text-left"><p>Multiclass</p></td>
+<td class="text-left"><p>0, 1, 2, 3, 4, 5</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>no of bathrooms</strong></p></td>
+<td class="text-left"><p>Number of bathrooms in the house</p></td>
+<td class="text-left"><p>Multiclass</p></td>
+<td class="text-left"><p>0, 1, 2, 3, 4, 5, 6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>quality</strong></p></td>
+<td class="text-left"><p>Quality level of the house <em>(response variable)</em></p></td>
+<td class="text-left"><p>Binary</p></td>
+<td class="text-left"><p>Low (0), Medium-High-UltraHigh (1)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>balcony</strong></p></td>
+<td class="text-left"><p>Indicates if the house has a balcony</p></td>
+<td class="text-left"><p>Binary</p></td>
+<td class="text-left"><p>true (1), false (0)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>barbecue area</strong></p></td>
+<td class="text-left"><p>Indicates if the house has a barbecue area</p></td>
+<td class="text-left"><p>Binary</p></td>
+<td class="text-left"><p>true (1), false (0)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>private pool</strong></p></td>
+<td class="text-left"><p>Indicates if the house has a private pool</p></td>
+<td class="text-left"><p>Binary</p></td>
+<td class="text-left"><p>true (1), false (0)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>private garden</strong></p></td>
+<td class="text-left"><p>Indicates if the house has a private garden</p></td>
+<td class="text-left"><p>Binary</p></td>
+<td class="text-left"><p>true (1), false (0)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">polars</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pl</span>
+
+<span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/FabioScielzoOrtiz/robust_mixed_dist-docu/refs/heads/main/data/dubai_houses_processed.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_url</span><span class="p">)</span>
+
+<span class="n">quant_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="s1">&#39;size_in_sqft&#39;</span><span class="p">,</span> <span class="s1">&#39;price_per_sqft&#39;</span><span class="p">]</span>
+<span class="n">binary_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;quality&#39;</span><span class="p">,</span> <span class="s1">&#39;balcony&#39;</span><span class="p">,</span> <span class="s1">&#39;barbecue_area&#39;</span><span class="p">,</span> <span class="s1">&#39;private_pool&#39;</span><span class="p">,</span> <span class="s1">&#39;private_garden&#39;</span><span class="p">]</span>
+<span class="n">multiclass_variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;no_of_bedrooms&#39;</span><span class="p">,</span> <span class="s1">&#39;no_of_bathrooms&#39;</span><span class="p">]</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">quant_variables</span> <span class="o">+</span> <span class="n">binary_variables</span> <span class="o">+</span> <span class="n">multiclass_variables</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 12)</small><table border="1" class="dataframe"><thead><tr><th>latitude</th><th>longitude</th><th>price</th><th>size_in_sqft</th><th>price_per_sqft</th><th>quality</th><th>balcony</th><th>barbecue_area</th><th>private_pool</th><th>private_garden</th><th>no_of_bedrooms</th><th>no_of_bathrooms</th></tr><tr><td>f64</td><td>f64</td><td>i64</td><td>i64</td><td>f64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td><td>i64</td></tr></thead><tbody><tr><td>25.113208</td><td>55.138932</td><td>2700000</td><td>1079</td><td>2502.32</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td></tr><tr><td>25.106809</td><td>55.151201</td><td>2850000</td><td>1582</td><td>1801.52</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td></tr><tr><td>25.063302</td><td>55.137728</td><td>1150000</td><td>1951</td><td>589.44</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>3</td><td>5</td></tr><tr><td>25.227295</td><td>55.341761</td><td>2850000</td><td>2020</td><td>1410.89</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td></tr><tr><td>25.114275</td><td>55.139764</td><td>1729200</td><td>507</td><td>3410.65</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td></tr></tbody></table></div></div></div>
+</div>
+</section>
+<section id="robust-mixed-dist-mixed">
+<h2><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.mixed</span></code><a class="headerlink" href="#robust-mixed-dist-mixed" title="Link to this heading">#</a></h2>
+<section id="ggowerdistmatrix">
+<h3><code class="docutils literal notranslate"><span class="pre">GGowerDistMatrix</span></code><a class="headerlink" href="#ggowerdistmatrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.mixed</span><span class="w"> </span><span class="kn">import</span> <span class="n">GGowerDistMatrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">quant_variables</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">binary_variables</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">multiclass_variables</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ggower_dist_matrix</span> <span class="o">=</span> <span class="n">GGowerDistMatrix</span><span class="p">(</span>
+    <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> 
+    <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> 
+    <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span>
+    <span class="n">d1</span><span class="o">=</span><span class="s2">&quot;robust_mahalanobis&quot;</span><span class="p">,</span> 
+    <span class="n">d2</span><span class="o">=</span><span class="s2">&quot;sokal&quot;</span><span class="p">,</span> 
+    <span class="n">d3</span><span class="o">=</span><span class="s2">&quot;hamming&quot;</span><span class="p">,</span>
+    <span class="n">robust_method</span><span class="o">=</span><span class="s2">&quot;trimmed&quot;</span><span class="p">,</span> 
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+    <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">ggower_dist_matrix</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.64946389, 2.79008972, ..., 2.36223596, 2.87529178,
+        2.06208371],
+       [1.64946389, 0.        , 2.04187428, ..., 1.78060429, 2.02786949,
+        1.95803076],
+       [2.79008972, 2.04187428, 0.        , ..., 0.77870059, 2.3599971 ,
+        2.32341031],
+       ...,
+       [2.36223596, 1.78060429, 0.77870059, ..., 0.        , 2.50576595,
+        2.45118981],
+       [2.87529178, 2.02786949, 2.3599971 , ..., 2.50576595, 0.        ,
+        1.90657364],
+       [2.06208371, 1.95803076, 2.32341031, ..., 2.45118981, 1.90657364,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ggowerdist">
+<h3><code class="docutils literal notranslate"><span class="pre">GGowerDist</span></code><a class="headerlink" href="#ggowerdist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.mixed</span><span class="w"> </span><span class="kn">import</span> <span class="n">GGowerDist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">ggower_dist</span> <span class="o">=</span> <span class="n">GGowerDist</span><span class="p">(</span>
+    <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> 
+    <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> 
+    <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span>
+    <span class="n">d1</span><span class="o">=</span><span class="s2">&quot;robust_mahalanobis&quot;</span><span class="p">,</span> 
+    <span class="n">d2</span><span class="o">=</span><span class="s2">&quot;sokal&quot;</span><span class="p">,</span> 
+    <span class="n">d3</span><span class="o">=</span><span class="s2">&quot;hamming&quot;</span><span class="p">,</span>
+    <span class="n">robust_method</span><span class="o">=</span><span class="s2">&quot;trimmed&quot;</span><span class="p">,</span> 
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+    <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">ggower_dist</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">ggower_dist</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(1.7471954488718715)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fastggowerdistmatrix">
+<h3><code class="docutils literal notranslate"><span class="pre">FastGGowerDistMatrix</span></code><a class="headerlink" href="#fastggowerdistmatrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.mixed</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastGGowerDistMatrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fastGGower</span> <span class="o">=</span> <span class="n">FastGGowerDistMatrix</span><span class="p">(</span>
+    <span class="n">frac_sample_size</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> 
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> 
+    <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> 
+    <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> 
+    <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span> 
+    <span class="n">d1</span><span class="o">=</span><span class="s1">&#39;robust_mahalanobis&#39;</span><span class="p">,</span>
+    <span class="n">d2</span><span class="o">=</span><span class="s1">&#39;sokal&#39;</span><span class="p">,</span> 
+    <span class="n">d3</span><span class="o">=</span><span class="s1">&#39;hamming&#39;</span><span class="p">,</span> 
+    <span class="n">robust_method</span><span class="o">=</span><span class="s1">&#39;trimmed&#39;</span><span class="p">,</span> 
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span>
+<span class="p">)</span>
+
+<span class="n">fastGGower</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">fastGGower</span><span class="o">.</span><span class="n">D_GGower</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 3.68529726, 3.68475948, ..., 4.22094877, 3.66144667,
+        3.52869984],
+       [3.68529726, 0.        , 2.52875815, ..., 2.66387506, 2.52254662,
+        2.62950908],
+       [3.68475948, 2.52875815, 0.        , ..., 2.24613845, 0.873628  ,
+        0.96966438],
+       ...,
+       [4.22094877, 2.66387506, 2.24613845, ..., 0.        , 2.28228857,
+        2.66848323],
+       [3.66144667, 2.52254662, 0.873628  , ..., 2.28228857, 0.        ,
+        1.21708063],
+       [3.52869984, 2.62950908, 0.96966438, ..., 2.66848323, 1.21708063,
+        0.        ]], shape=(190, 190))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="relmsdistmatrix">
+<h3><code class="docutils literal notranslate"><span class="pre">RelMSDistMatrix</span></code><a class="headerlink" href="#relmsdistmatrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.mixed</span><span class="w"> </span><span class="kn">import</span> <span class="n">RelMSDistMatrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">relms_dist_matrix</span> <span class="o">=</span> <span class="n">RelMSDistMatrix</span><span class="p">(</span>
+    <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="p">,</span> 
+    <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="p">,</span> 
+    <span class="n">p3</span><span class="o">=</span><span class="n">p3</span><span class="p">,</span> 
+    <span class="n">d1</span><span class="o">=</span><span class="s2">&quot;robust_mahalanobis&quot;</span><span class="p">,</span> 
+    <span class="n">d2</span><span class="o">=</span><span class="s2">&quot;jaccard&quot;</span><span class="p">,</span> 
+    <span class="n">d3</span><span class="o">=</span><span class="s2">&quot;hamming&quot;</span><span class="p">,</span> 
+    <span class="n">robust_method</span><span class="o">=</span><span class="s2">&quot;trimmed&quot;</span><span class="p">,</span> 
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+    <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+    <span class="n">weights</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+
+<span class="n">relms_dist_matrix</span><span class="o">.</span><span class="n">compute</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>G2 is not PSD, a transformation to force it will be applied.
+G3 is not PSD, a transformation to force it will be applied.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.        , 18.85971943, 18.93892147, ..., 18.91363393,
+        18.90754052, 18.88350166],
+       [18.85971936,  0.        , 18.9048603 , ..., 18.89392648,
+        18.87910279, 18.87505502],
+       [18.93892141, 18.90486003,  0.        , ..., 18.82896998,
+        18.90545703, 18.90382089],
+       ...,
+       [18.91363392, 18.89392648, 18.82896997, ...,  0.        ,
+        18.91909055, 18.91526868],
+       [18.90754053, 18.8791028 , 18.905457  , ..., 18.91909055,
+         0.        , 18.83899926],
+       [18.88350169, 18.875055  , 18.90382089, ..., 18.9152687 ,
+        18.83899926,  0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="robust-mixed-dist-quantitative">
+<h2><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.quantitative</span></code><a class="headerlink" href="#robust-mixed-dist-quantitative" title="Link to this heading">#</a></h2>
+<section id="euclidean-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">euclidean_dist_matrix</span></code><a class="headerlink" href="#euclidean-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">euclidean_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">euclidean_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[      0.        ,  150002.48041163, 1550001.42564254, ...,
+         200004.30910639, 2025000.65272331, 1939113.64052303],
+       [ 150002.48041163,       0.        , 1700000.47214668, ...,
+          50002.10458763, 2175000.34481037, 2089113.31944683],
+       [1550001.42564254, 1700000.47214668,       0.        , ...,
+        1750000.23836684,  475001.65333313,  389114.87041128],
+       ...,
+       [ 200004.30910639,   50002.10458763, 1750000.23836684, ...,
+              0.        , 2225000.39656347, 2139113.36955273],
+       [2025000.65272331, 2175000.34481037,  475001.65333313, ...,
+        2225000.39656347,       0.        ,   85887.02978977],
+       [1939113.64052303, 2089113.31944683,  389114.87041128, ...,
+        2139113.36955273,   85887.02978977,       0.        ]],
+      shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="euclidean-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">euclidean_dist</span></code><a class="headerlink" href="#euclidean-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">euclidean_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">euclidean_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2400000.3317385474
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="minkowski-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">minkowski_dist_matrix</span></code><a class="headerlink" href="#minkowski-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">minkowski_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minkowski_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[      0.      ,  151203.818668, 1552784.93111 , ...,
+         201851.029416, 2026929.290262, 1940943.259859],
+       [ 151203.818668,       0.      , 1701581.13698 , ...,
+          50647.223546, 2176731.471594, 2090745.441191],
+       [1552784.93111 , 1701581.13698 ,       0.      , ...,
+        1750934.500526,  476533.822672,  390625.702813],
+       ...,
+       [ 201851.029416,   50647.223546, 1750934.500526, ...,
+              0.      , 2226780.677854, 2140794.797713],
+       [2026929.290262, 2176731.471594,  476533.822672, ...,
+        2226780.677854,       0.      ,   85986.030403],
+       [1940943.259859, 2090745.441191,  390625.702813, ...,
+        2140794.797713,   85986.030403,       0.      ]],
+      shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="minkowski-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">minkowski_dist</span></code><a class="headerlink" href="#minkowski-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">minkowski_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">minkowski_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2401294.7191080004)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="canberra-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">canberra_dist_matrix</span></code><a class="headerlink" href="#canberra-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">canberra_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">canberra_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 0.3791237 , 1.31009432, ..., 0.57187821, 1.25368465,
+        1.15877842],
+       [0.3791237 , 0.        , 1.03737598, ..., 0.20199247, 1.30874091,
+        1.21638296],
+       [1.31009432, 1.03737598, 0.        , ..., 0.87872481, 0.92625515,
+        0.85725929],
+       ...,
+       [0.57187821, 0.20199247, 0.87872481, ..., 0.        , 1.31626027,
+        1.22724486],
+       [1.25368465, 1.30874091, 0.92625515, ..., 1.31626027, 0.        ,
+        0.12046549],
+       [1.15877842, 1.21638296, 0.85725929, ..., 1.22724486, 0.12046549,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="canberra-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">canberra_dist</span></code><a class="headerlink" href="#canberra-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">canberra_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">canberra_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(1.0399913488310089)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pearson-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">pearson_dist_matrix</span></code><a class="headerlink" href="#pearson-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">pearson_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pearson_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.20925465, 3.17227178, ..., 3.78782432, 2.9029884 ,
+        2.50486894],
+       [1.20925465, 0.        , 2.0785152 , ..., 3.2901998 , 2.19157364,
+        1.76066423],
+       [3.17227178, 2.0785152 , 0.        , ..., 4.06630612, 1.98147384,
+        1.44992911],
+       ...,
+       [3.78782432, 3.2901998 , 4.06630612, ..., 0.        , 3.23000242,
+        3.82301831],
+       [2.9029884 , 2.19157364, 1.98147384, ..., 3.23000242, 0.        ,
+        1.09935355],
+       [2.50486894, 1.76066423, 1.44992911, ..., 3.82301831, 1.09935355,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mahalanobis-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist_matrix</span></code><a class="headerlink" href="#mahalanobis-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">mahalanobis_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mahalanobis_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.53300007, 3.59602077, ..., 2.2183579 , 3.06832405,
+        2.96311246],
+       [1.53300007, 0.        , 2.1252418 , ..., 0.73353908, 1.96608988,
+        1.83655561],
+       [3.59602077, 2.1252418 , 0.        , ..., 1.46900905, 2.11887678,
+        2.0285113 ],
+       ...,
+       [2.2183579 , 0.73353908, 1.46900905, ..., 0.        , 1.98371456,
+        1.85102134],
+       [3.06832405, 1.96608988, 2.11887678, ..., 1.98371456, 0.        ,
+        0.13626976],
+       [2.96311246, 1.83655561, 2.0285113 , ..., 1.85102134, 0.13626976,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mahalanobis-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist</span></code><a class="headerlink" href="#mahalanobis-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">mahalanobis_dist</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">rowvar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">mahalanobis_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">,</span> <span class="n">S</span><span class="o">=</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.7759092403090455)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="robust-maha-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">robust_maha_dist_matrix</span></code><a class="headerlink" href="#robust-maha-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">robust_maha_dist_matrix</span><span class="p">,</span> <span class="n">S_robust</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_trimmed</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;trimmed&quot;</span><span class="p">,</span>
+                               <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> 
+                               <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">robust_maha_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span>   
+                        <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_trimmed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.81864545, 3.91631623, ..., 2.35363057, 4.98194325,
+        4.75458207],
+       [1.81864545, 0.        , 2.16959868, ..., 0.6471128 , 3.43994713,
+        3.20084918],
+       [3.91631623, 2.16959868, 0.        , ..., 1.64792972, 2.60025908,
+        2.39706372],
+       ...,
+       [2.35363057, 0.6471128 , 1.64792972, ..., 0.        , 3.35699379,
+        3.11692523],
+       [4.98194325, 3.43994713, 2.60025908, ..., 3.35699379, 0.        ,
+        0.24221216],
+       [4.75458207, 3.20084918, 2.39706372, ..., 3.11692523, 0.24221216,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_winsorized</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span>  
+                               <span class="n">method</span><span class="o">=</span><span class="s2">&quot;winsorized&quot;</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+                               <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+
+<span class="n">robust_maha_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span>                          
+                        <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_winsorized</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.63032279, 3.65293571, ..., 2.22371162, 3.90611218,
+        3.74688562],
+       [1.63032279, 0.        , 2.08532543, ..., 0.66249147, 2.59842998,
+        2.42433088],
+       [3.65293571, 2.08532543, 0.        , ..., 1.52111172, 2.10402449,
+        1.9736514 ],
+       ...,
+       [2.22371162, 0.66249147, 1.52111172, ..., 0.        , 2.51448355,
+        2.33923374],
+       [3.90611218, 2.59842998, 2.10402449, ..., 2.51448355, 0.        ,
+        0.17812079],
+       [3.74688562, 2.42433088, 1.9736514 , ..., 2.33923374, 0.17812079,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_MAD</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;MAD&quot;</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+                               <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">robust_maha_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_MAD</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 1.86757181, 3.95871434, ..., 2.36822465, 5.39713175,
+        5.13977515],
+       [1.86757181, 0.        , 2.17155508, ..., 0.64240264, 3.80101401,
+        3.5324399 ],
+       [3.95871434, 2.17155508, 0.        , ..., 1.67434971, 2.92445535,
+        2.68698538],
+       ...,
+       [2.36822465, 0.64240264, 1.67434971, ..., 0.        , 3.75496147,
+        3.48534267],
+       [5.39713175, 3.80101401, 2.92445535, ..., 3.75496147, 0.        ,
+        0.27150497],
+       [5.13977515, 3.5324399 , 2.68698538, ..., 3.48534267, 0.27150497,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="robust-maha-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">robust_maha_dist</span></code><a class="headerlink" href="#robust-maha-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.quantitative</span><span class="w"> </span><span class="kn">import</span> <span class="n">robust_maha_dist</span><span class="p">,</span> <span class="n">S_robust</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_trimmed</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;trimmed&quot;</span><span class="p">,</span> 
+                               <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> 
+                               <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">robust_maha_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">,</span> <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_trimmed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.284177358842924)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_winsorized</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span>                   
+                               <span class="n">method</span><span class="o">=</span><span class="s2">&quot;winsorized&quot;</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> 
+                               <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">robust_maha_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">,</span> <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_winsorized</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.106209364933163)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S_robust_MAD</span> <span class="o">=</span> <span class="n">S_robust</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;MAD&quot;</span><span class="p">,</span>
+                               <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">n_iters</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                               <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">robust_maha_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">,</span> <span class="n">S_robust</span><span class="o">=</span><span class="n">S_robust_MAD</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.321626389691806)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="robust-mixed-dist-binary">
+<h2><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.binary</span></code><a class="headerlink" href="#robust-mixed-dist-binary" title="Link to this heading">#</a></h2>
+<section id="sokal-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">sokal_dist_matrix</span></code><a class="headerlink" href="#sokal-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.binary</span><span class="w"> </span><span class="kn">import</span> <span class="n">sokal_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sokal_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">binary_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 0.33333333, 0.33333333, ..., 0.33333333, 0.57142857,
+        0.        ],
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       ...,
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       [0.57142857, 0.33333333, 0.33333333, ..., 0.33333333, 0.        ,
+        0.57142857],
+       [0.        , 0.33333333, 0.33333333, ..., 0.33333333, 0.57142857,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sokal-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">sokal_dist</span></code><a class="headerlink" href="#sokal-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.binary</span><span class="w"> </span><span class="kn">import</span> <span class="n">sokal_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">sokal_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.000000000001225
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="jaccard-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">jaccard_dist_matrix</span></code><a class="headerlink" href="#jaccard-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.binary</span><span class="w"> </span><span class="kn">import</span> <span class="n">jaccard_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jaccard_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">binary_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.        , 0.33333333, 0.33333333, ..., 0.33333333, 0.5       ,
+        0.        ],
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       ...,
+       [0.33333333, 0.        , 0.        , ..., 0.        , 0.33333333,
+        0.33333333],
+       [0.5       , 0.33333333, 0.33333333, ..., 0.33333333, 0.        ,
+        0.5       ],
+       [0.        , 0.33333333, 0.33333333, ..., 0.33333333, 0.5       ,
+        0.        ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="jaccard-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">jaccard_dist</span></code><a class="headerlink" href="#jaccard-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.binary</span><span class="w"> </span><span class="kn">import</span> <span class="n">jaccard_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">jaccard_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="robust-mixed-dist-multiclass">
+<h2><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.multiclass</span></code><a class="headerlink" href="#robust-mixed-dist-multiclass" title="Link to this heading">#</a></h2>
+<section id="hamming-dist-matrix">
+<h3><code class="docutils literal notranslate"><span class="pre">hamming_dist_matrix</span></code><a class="headerlink" href="#hamming-dist-matrix" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.multiclass</span><span class="w"> </span><span class="kn">import</span> <span class="n">hamming_dist_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hamming_dist_matrix</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="n">multiclass_variables</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0. , 0.5, 1. , ..., 1. , 0. , 0. ],
+       [0.5, 0. , 1. , ..., 1. , 0.5, 0.5],
+       [1. , 1. , 0. , ..., 0. , 1. , 1. ],
+       ...,
+       [1. , 1. , 0. , ..., 0. , 1. , 1. ],
+       [0. , 0.5, 1. , ..., 1. , 0. , 0. ],
+       [0. , 0.5, 1. , ..., 1. , 0. , 0. ]], shape=(1905, 1905))
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hamming-dist">
+<h3><code class="docutils literal notranslate"><span class="pre">hamming_dist</span></code><a class="headerlink" href="#hamming-dist" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">robust_mixed_dist.multiclass</span><span class="w"> </span><span class="kn">import</span> <span class="n">hamming_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xi</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">xr</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">quant_variables</span><span class="p">][</span><span class="mi">10</span><span class="p">,:]</span>
+
+<span class="n">hamming_dist</span><span class="p">(</span><span class="n">xi</span><span class="o">=</span><span class="n">xi</span><span class="p">,</span> <span class="n">xr</span><span class="o">=</span><span class="n">xr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(1.0)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="modules.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modules</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-mixed"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.mixed</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ggowerdistmatrix"><code class="docutils literal notranslate"><span class="pre">GGowerDistMatrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ggowerdist"><code class="docutils literal notranslate"><span class="pre">GGowerDist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastggowerdistmatrix"><code class="docutils literal notranslate"><span class="pre">FastGGowerDistMatrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relmsdistmatrix"><code class="docutils literal notranslate"><span class="pre">RelMSDistMatrix</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-quantitative"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.quantitative</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-dist-matrix"><code class="docutils literal notranslate"><span class="pre">euclidean_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-dist"><code class="docutils literal notranslate"><span class="pre">euclidean_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-dist-matrix"><code class="docutils literal notranslate"><span class="pre">minkowski_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-dist"><code class="docutils literal notranslate"><span class="pre">minkowski_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canberra-dist-matrix"><code class="docutils literal notranslate"><span class="pre">canberra_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canberra-dist"><code class="docutils literal notranslate"><span class="pre">canberra_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pearson-dist-matrix"><code class="docutils literal notranslate"><span class="pre">pearson_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-dist-matrix"><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mahalanobis-dist"><code class="docutils literal notranslate"><span class="pre">mahalanobis_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-maha-dist-matrix"><code class="docutils literal notranslate"><span class="pre">robust_maha_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-maha-dist"><code class="docutils literal notranslate"><span class="pre">robust_maha_dist</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-binary"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.binary</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokal-dist-matrix"><code class="docutils literal notranslate"><span class="pre">sokal_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sokal-dist"><code class="docutils literal notranslate"><span class="pre">sokal_dist</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jaccard-dist-matrix"><code class="docutils literal notranslate"><span class="pre">jaccard_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jaccard-dist"><code class="docutils literal notranslate"><span class="pre">jaccard_dist</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#robust-mixed-dist-multiclass"><code class="docutils literal notranslate"><span class="pre">robust_mixed_dist.multiclass</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamming-dist-matrix"><code class="docutils literal notranslate"><span class="pre">hamming_dist_matrix</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hamming-dist"><code class="docutils literal notranslate"><span class="pre">hamming_dist</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fabio Scielzo Ortiz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
