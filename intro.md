@@ -8,7 +8,7 @@ or Manhattan, are unsuitable for mixed-type data, and although Gower distance wa
 designed to handle this kind of data, it may lead to suboptimal results in the presence
 of outlying units or underlying correlation structure.
 
-In the paper ***Grané, A., Scielzo-Ortiz, F.: On generalized Gower distance for mixed-type data: extensive simulation study and new software tools.  SORT–Statistics and Operations Research Transactions 49 (2) (in press) (2025)*** robust distances for mixed-type data are defined and explored, namely **robust generalized Gower** and
+In the paper ***Grané , Aurea; Scielzo-Ortiz, Fabio. “On generalized Gower distance for mixed-type data: extensive simulation study and new software tools”. SORT-Statistics and Operations Research Transactions, pp. 213-44, doi:10.57645/20.8080.02.28.*** robust distances for mixed-type data are defined and explored, namely **robust generalized Gower** and
 **robust related metric scaling**. In addition,  the new Python package `robust-mixed-dist` is developed, which enables to
 compute these robust proposals as well as classical ones.
 
