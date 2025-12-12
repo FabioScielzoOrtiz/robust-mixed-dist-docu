@@ -14,5 +14,7 @@ compute these robust proposals as well as classical ones.
 
 The package is located in Python Package Index (PyPI), the standard repository of packages for the Python programming language: https://pypi.org/project/robust_mixed_dist/
 
+- **Paper link:** https://raco.cat/index.php/SORT/article/view/9900373
+
 ```{tableofcontents}
 ```
