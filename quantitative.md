@@ -138,7 +138,7 @@ The Mahalanobis distance between the observations `xi` and `xr`.
 
 
 
-## `robust_maha_dist_matrix`
+## `robust_mahalanobis_dist_matrix`
 
 ```
 Calculates the Robust Mahalanobis distance matrix for a data matrix `X` using SciPy and a robust estimation of the covariance matrix.
@@ -154,7 +154,7 @@ M: the Robust Mahalanobis distance matrix between the rows of X.
 ```
 
 
-## `robust_maha_dist`
+## `robust_mahalanobis_dist`
 
 ```
 Calculates the Robust Mahalanobis distance between a pair of vectors.

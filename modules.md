@@ -8,7 +8,7 @@
   - `canberra_dist`, `canberra_dist_matrix`
   - `pearson_dist_matrix`
   - `mahalanobis_dist`, `mahalanobis_dist_matrix`
-  - `robust_maha_dist`, `robust_maha_dist_matrix`
+  - `robust_mahalanobis_dist`, `robust_mahalanobis_dist_matrix`
 
 ---
 
@@ -25,9 +25,9 @@
 ---
 
 `mixed`
-  - `GGowerDist`, `GGowerDistMatrix`, `FastGGowerDistMatrix`
+  - `generalized_gower_dist`, `generalized_gower_dist_matrix`
 
-  - `RelMSDistMatrix`
+  - `related_metric_scaling_dist_matrix_faster`
 
 
 --- 
