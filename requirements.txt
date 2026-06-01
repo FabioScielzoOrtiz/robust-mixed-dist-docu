@@ -1,2 +1,2 @@
 jupyter-book==1.0.4
-robust-mixed-dist
+robust-mixed-dist==0.1.26
